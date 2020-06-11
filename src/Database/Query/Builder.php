@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sklo\LaravelClickHouse\Database\Query;
+namespace Sayorus\LaravelClickHouse\Database\Query;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
@@ -10,7 +10,7 @@ use Tinderbox\Clickhouse\Common\Format;
 use Illuminate\Support\Traits\Macroable;
 use Tinderbox\ClickhouseBuilder\Query\Grammar;
 use Tinderbox\ClickhouseBuilder\Query\BaseBuilder;
-use Sklo\LaravelClickHouse\Database\Connection;
+use Sayorus\LaravelClickHouse\Database\Connection;
 
 class Builder extends BaseBuilder
 {

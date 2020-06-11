@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sklo\LaravelClickHouse;
+namespace Sayorus\LaravelClickHouse;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\DatabaseManager;
-use Sklo\LaravelClickHouse\Database\Connection;
-use Sklo\LaravelClickHouse\Database\Eloquent\Model;
+use Sayorus\LaravelClickHouse\Database\Connection;
+use Sayorus\LaravelClickHouse\Database\Eloquent\Model;
 
 class ClickHouseServiceProvider extends ServiceProvider
 {

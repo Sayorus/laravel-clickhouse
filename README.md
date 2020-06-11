@@ -8,12 +8,12 @@ Eloquent model for ClickHouse
 
 ## Installation
 ```sh
-$ composer require sklo-agency/laravel-clickhouse
+$ composer require sayorus/laravel-clickhouse
 ```
 
 Then add the code above into your config/app.php file providers section
 ```php
-Sklo\LaravelClickHouse\ClickHouseServiceProvider::class,
+Sayorus\LaravelClickHouse\ClickHouseServiceProvider::class,
 ```
 And add new connection into your config/database.php file. Something like this:
 ```php
@@ -27,7 +27,7 @@ And add new connection into your config/database.php file. Something like this:
         'password' => '',
         'options' => [
             'timeout' => 10,
-            'protocol' => 'https'
+            'protocol' => 'http'
         ]
     ]
 ]
@@ -46,7 +46,7 @@ Or like this, if clickhouse runs in cluster
                 'password' => '',
                 'options' => [
                     'timeout' => 10,
-                    'protocol' => 'https'
+                    'protocol' => 'http'
                 ]
             ],
             'server-2' => [
@@ -57,7 +57,7 @@ Or like this, if clickhouse runs in cluster
                 'password' => '',
                 'options' => [
                     'timeout' => 10,
-                    'protocol' => 'https'
+                    'protocol' => 'http'
                 ]
             ]
         ]
@@ -69,7 +69,7 @@ Then create model
 ```php
 <?php
 
-use Sklo\LaravelClickHouse\Database\Eloquent\Model;
+use Sayorus\LaravelClickHouse\Database\Eloquent\Model;
 
 class Payment extends Model
 {

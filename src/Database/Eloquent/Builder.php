@@ -1,6 +1,6 @@
 <?php
 
-namespace Sklo\LaravelClickHouse\Database\Eloquent;
+namespace Sayorus\LaravelClickHouse\Database\Eloquent;
 
 use Closure;
 use BadMethodCallException;
@@ -12,7 +12,7 @@ use Illuminate\Database\Concerns\BuildsQueries;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\RelationNotFoundException;
-use Sklo\LaravelClickHouse\Database\Query\Builder as QueryBuilder;
+use Sayorus\LaravelClickHouse\Database\Query\Builder as QueryBuilder;
 
 /**
  * @mixin QueryBuilder
@@ -135,7 +135,7 @@ class Builder
             $this->query->where(function (QueryBuilder $queryBuilder) use ($column) {
                 $eloquentBuilder = $this->model->newEloquentBuilder($queryBuilder);
                 $column($eloquentBuilder);
-            });
+            }, $operator, $value, $boolean);
         } else {
             $this->query->where(...func_get_args());
         }

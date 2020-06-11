@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Sklo\LaravelClickHouse\Database;
+namespace Sayorus\LaravelClickHouse\Database;
 
 use Tinderbox\ClickhouseBuilder\Query\Grammar;
-use Sklo\LaravelClickHouse\Database\Query\Builder;
+use Sayorus\LaravelClickHouse\Database\Query\Builder;
 
 class Connection extends \Tinderbox\ClickhouseBuilder\Integrations\Laravel\Connection
 {
